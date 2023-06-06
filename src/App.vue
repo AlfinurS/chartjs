@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Примеры работы с vue-chartjs</h1>
+    <h2>Первый график</h2>
+    <ChartComponent class="w-75" />
+    <h2>Обновление графиков</h2>
+    <RandomChart class="w-75" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChartComponent from './components/ChartComponent.vue'
+import RandomChart from './components/RandomChart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ChartComponent,
+    RandomChart
   }
 }
 </script>
@@ -24,5 +29,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.w-75 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
