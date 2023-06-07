@@ -1,20 +1,19 @@
 <script>
-import { Pie } from 'vue-chartjs'
+import { Doughnut } from 'vue-chartjs'
 
 export default {
-  extends: Pie,
+  extends: Doughnut,
   data: () => ({
     data: {
-      labels: ['Электроника и бытовая техника', 'Мебель и товары для дома', 'Одежда и обувь', 'Продукты питания', 'Товары для красоты и здоровья'],
+      labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
       datasets: [{
           label: 'My First Dataset',
-          data: [22, 17.7, 13.9, 13.5, 7.5],
+          data: [300, 50, 100, 40],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
             'rgb(255, 205, 86)',
-            'rgb(245, 200, 82)',
-            'rgb(245, 100, 82)'
+            'rgb(245, 200, 82)'
           ],
           hoverOffset: 4
         }]
