@@ -1,17 +1,18 @@
 <template>
-<div>
-    <h1>Онлайн-продажи в России</h1>
+<div class="container"> 
+    <h1 class="headline">Онлайн-продажи в России</h1>
     
-    <h3>Категории покупок</h3>
+    <h3 class="subtitle">Категории покупок</h3>
 
     <PieComponent class="w-75"/>
 
-    <h2>Обновление графиков</h2>
+    <h3 class="subtitle">Обновление графиков</h3>
     <RandomChart class="w-75" />
-    <h2>Круг</h2>
+
+    <h3 class="subtitle">Круг</h3>
     
     <ChartComponent class="w-75" />
-    <h2>Бублик</h2>
+    <h3 class="subtitle">Бублик</h3>
     <DoughnutComponent class="w-75"/>
 </div>
 </template>
@@ -36,8 +37,22 @@ export default {
 
 <style>
 .w-75 {
-  width: 55%;
-  margin-left: auto;
+  width: 35%;
+  margin-left: 20px;
   margin-right: auto;
+  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+.headline {
+  text-align: center;
+  color: #191651;
+  font-size: 40px;
+}
+.subtitle {
+  font-size: 20px;
+  color: #191651;
+  margin-top: 60px;
+  text-align: left;
 }
 </style>

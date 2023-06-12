@@ -1,5 +1,7 @@
 <script>
+
 import { Pie } from 'vue-chartjs'
+
 
 export default {
   extends: Pie,
@@ -7,21 +9,26 @@ export default {
     data: {
       labels: ['Электроника и бытовая техника', 'Мебель и товары для дома', 'Одежда и обувь', 'Продукты питания', 'Товары для красоты и здоровья'],
       datasets: [{
-          label: 'My First Dataset',
           data: [22, 17.7, 13.9, 13.5, 7.5],
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(245, 200, 82)',
-            'rgb(245, 100, 82)'
+            'rgb(111, 106, 248)',
+            'rgb(84, 116, 185)',
+            'rgb(48, 73, 119)',
+            'rgb(144, 164, 205)',
+            'rgb(120, 152, 224)'
           ],
-          hoverOffset: 4
+          hoverOffset: 4,
         }]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      legend: {
+              display: true,
+              position: "right",
+              labels: {fontColor: 'rgb(25, 22, 81)'}
+          },
+            
     }
   }),
 
