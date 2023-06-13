@@ -1,19 +1,15 @@
 <template>
 <div class="container"> 
-    <h1 class="headline">Онлайн-продажи в России</h1>
+  <h1 class="headline">Онлайн-продажи в России</h1>
     
-    <h3 class="subtitle">Категории покупок</h3>
-
-    <PieComponent class="w-75"/>
-
-    <h3 class="subtitle">Обновление графиков</h3>
-    <RandomChart class="w-75" />
-
-    <h3 class="subtitle">Круг</h3>
-    
-    <ChartComponent class="w-75" />
-    <h3 class="subtitle">Бублик</h3>
-    <DoughnutComponent class="w-75"/>
+  <div class="section">
+      <PieComponent class="w-pie"/>
+      <ChartComponent class="w-chart"/>
+  </div>
+  <div class="section">
+      <DoughnutComponent class="w-doughnut"/>
+      <RandomChart class="w-line"/>
+  </div>
 </div>
 </template>
 
@@ -36,23 +32,61 @@ export default {
 </script>
 
 <style>
-.w-75 {
-  width: 35%;
-  margin-left: 20px;
-  margin-right: auto;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+
+}
+.w-pie {
+  max-width: 600px;
+  width: 100%;
+  padding: 38px;
+  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+}
+.w-chart {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
   box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
   border-radius: 8px;
   background-color: #FFFFFF;
 }
-.headline {
-  text-align: center;
-  color: #191651;
-  font-size: 40px;
+
+.w-line {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  border-radius: 8px;
+  background-color: #FFFFFF;
 }
-.subtitle {
-  font-size: 20px;
+
+.w-doughnut {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+
+}
+
+.headline {
   color: #191651;
-  margin-top: 60px;
-  text-align: left;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 </style>

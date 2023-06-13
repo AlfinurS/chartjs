@@ -1,7 +1,7 @@
 <template>
-  <div class="small">
+  <div >
     <line-chart :chart-data="datacollection"></line-chart>
-    <button @click="fillData()">Обновить</button>
+    <!-- <button @click="fillData()">Обновить</button> -->
   </div>
 </template>
 
@@ -23,29 +23,24 @@
     methods: {
       fillData () {
         this.datacollection = {
-          labels: [this.getRandomInt(), this.getRandomInt()],
+          labels: ['2023', '2022'],
           datasets: [
             {
-              label: 'Данные №1',
-              backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt()]
-            }, {
-              label: 'Данные №2',
+              label: 'Wildberries №2',
               backgroundColor: '#79f879',
-              data: [this.getRandomInt(), this.getRandomInt()]
-            }
+              data: [41, 47]
+            },
+            {
+              label: 'Ozon №1',
+              backgroundColor: '#f87979',
+              data: [63, 59]
+            }, 
           ]
         }
       },
-      getRandomInt () {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
     }
   }
 </script>
 
 <style>
-  .small {
-    max-width: 600px;
-  }
 </style>

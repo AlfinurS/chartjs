@@ -18,6 +18,7 @@ export default {
             'rgb(120, 152, 224)'
           ],
           hoverOffset: 4,
+          borderWidth: 1,
         }]
     },
     options: {
@@ -26,9 +27,17 @@ export default {
       legend: {
               display: true,
               position: "right",
-              labels: {fontColor: 'rgb(25, 22, 81)'}
+              labels: { 
+                fontColor: 'rgb(25, 22, 81)',
+                boxWidth:30
+                }
           },
-            
+      title: {
+              display: true,
+              text: 'Категории покупок',
+              fontSize: 14,
+              padding: 18
+          }
     }
   }),
 
