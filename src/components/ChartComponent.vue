@@ -9,22 +9,22 @@ export default {
       datasets: [
         {
           label: '1 квартал',
-          backgroundColor: '#f87979',
+          backgroundColor: '#6080D6',
           data: [163]
         },
         {
           label: '2 квартал',
-          backgroundColor: '#f88979',
+          backgroundColor: '#6080D6',
           data: [138]
         },
         {
           label: '3 квартал',
-          backgroundColor: '#f88979',
+          backgroundColor: '#6080D6',
           data: [142]
         },
         {
           label: '4 квартал',
-          backgroundColor: '#f88979',
+          backgroundColor: '#6080D6',
           data: [182]
         }
       ]

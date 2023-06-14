@@ -26,13 +26,13 @@
           labels: ['2023', '2022'],
           datasets: [
             {
-              label: 'Wildberries №2',
-              backgroundColor: '#79f879',
+              label: 'Wildberries',
+              backgroundColor: '#B411A3',
               data: [41, 47]
             },
             {
-              label: 'Ozon №1',
-              backgroundColor: '#f87979',
+              label: 'Ozon',
+              backgroundColor: '#0C49F4',
               data: [63, 59]
             }, 
           ]

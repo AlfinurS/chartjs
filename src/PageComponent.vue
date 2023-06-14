@@ -1,14 +1,33 @@
 <template>
 <div class="container"> 
   <h1 class="headline">Онлайн-продажи в России</h1>
-    
   <div class="section">
-      <PieComponent class="w-pie"/>
+    <div class="item">
       <ChartComponent class="w-chart"/>
+    </div>
+    <div class="list">
+      <MiniDoughnutComponent class="mini-doughnut"/>
+      <OzonDoughnutComponent class="mini-doughnut"/>
+      <WilDoughnutComponent class="mini-doughnut"/>
+      <VkusDoughnutComponent class="mini-doughnut"/>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="item">
+      <PieComponent class="w-pie"/>
+    </div>
+    <div class="item">
+      <LineComponent class="w-miniLine"/>
+    </div>
   </div>
   <div class="section">
+    <div class="item">
       <DoughnutComponent class="w-doughnut"/>
+    </div>
+    <div class="item">
       <RandomChart class="w-line"/>
+    </div>
   </div>
 </div>
 </template>
@@ -18,7 +37,13 @@
 import ChartComponent from './components/ChartComponent.vue'
 import RandomChart from './components/RandomChart.vue'
 import PieComponent from './components/PieComponent.vue'
+import LineComponent from './components/LineComponent.vue'
 import DoughnutComponent from './components/DoughnutComponent.vue'
+import MiniDoughnutComponent from './components/MiniDoughnutComponent.vue'
+import OzonDoughnutComponent from './components/OzonDoughnutComponent.vue'
+import WilDoughnutComponent from './components/WilDoughnutComponent.vue'
+import VkusDoughnutComponent from './components/VkusDoughnutComponent.vue'
+
 
 export default {
   name: 'PageComponent',
@@ -26,7 +51,12 @@ export default {
     PieComponent,
     ChartComponent,
     RandomChart,
-    DoughnutComponent
+    LineComponent,
+    DoughnutComponent,
+    MiniDoughnutComponent,
+    OzonDoughnutComponent,
+    WilDoughnutComponent,
+    VkusDoughnutComponent
   }
 }
 </script>
@@ -46,44 +76,47 @@ export default {
   margin-bottom: 40px;
 
 }
-.w-pie {
-  max-width: 600px;
-  width: 100%;
-  padding: 38px;
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px; 
   box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
   border-radius: 8px;
   background-color: #FFFFFF;
+  padding: 12px 18px;
+}
+
+.item {
+  display: flex;
+  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  padding: 22px;
   margin-right: 20px;
 }
+.w-pie {
+  max-width: 300px;
+}
 .w-chart {
-  max-width: 500px;
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
-  border-radius: 8px;
-  background-color: #FFFFFF;
+  width: 600px;
 }
 
 .w-line {
   max-width: 500px;
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
-  border-radius: 8px;
-  background-color: #FFFFFF;
 }
 
+.w-miniLine {
+  max-width: 600px;
+}
 .w-doughnut {
-  max-width: 500px;
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  margin-right: 20px;
-
+  max-width: 300px;
 }
 
+.mini-doughnut {
+  max-width: 140px;
+  max-height: 200px;
+  width: 100%;
+}
 .headline {
   color: #191651;
   font-size: 28px;
