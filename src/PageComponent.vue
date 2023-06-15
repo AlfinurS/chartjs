@@ -14,6 +14,14 @@
   </div>
 
   <div class="section">
+    <ItemCardComponent 
+      v-for="shop in shops"
+      :key="shop.id"
+      :dataProps="shop">
+    </ItemCardComponent>
+  </div>
+
+  <div class="section">
     <div class="item">
       <PieComponent class="w-pie"/>
     </div>
@@ -34,20 +42,23 @@
 
 
 <script>
-import ChartComponent from './components/ChartComponent.vue'
-import RandomChart from './components/RandomChart.vue'
-import PieComponent from './components/PieComponent.vue'
-import LineComponent from './components/LineComponent.vue'
-import DoughnutComponent from './components/DoughnutComponent.vue'
-import MiniDoughnutComponent from './components/MiniDoughnutComponent.vue'
-import OzonDoughnutComponent from './components/OzonDoughnutComponent.vue'
-import WilDoughnutComponent from './components/WilDoughnutComponent.vue'
-import VkusDoughnutComponent from './components/VkusDoughnutComponent.vue'
+
+import ItemCardComponent from './components/ItemCardComponent.vue'
+import ChartComponent from './components/charts/ChartComponent.vue'
+import RandomChart from './components/charts/RandomChart.vue'
+import PieComponent from './components/charts/PieComponent.vue'
+import LineComponent from './components/charts/LineComponent.vue'
+import DoughnutComponent from './components/charts/DoughnutComponent.vue'
+import MiniDoughnutComponent from './components/charts/MiniDoughnutComponent.vue'
+import OzonDoughnutComponent from './components/charts/OzonDoughnutComponent.vue'
+import WilDoughnutComponent from './components/charts/WilDoughnutComponent.vue'
+import VkusDoughnutComponent from './components/charts/VkusDoughnutComponent.vue'
 
 
 export default {
   name: 'PageComponent',
   components: {
+    ItemCardComponent,
     PieComponent,
     ChartComponent,
     RandomChart,
@@ -57,6 +68,38 @@ export default {
     OzonDoughnutComponent,
     WilDoughnutComponent,
     VkusDoughnutComponent
+  },
+
+  data() {
+    return {
+      shops: [
+          {
+            id: 1,
+            name: "Сбермаркет",
+            profit: 103.5,
+          },
+          {
+            id: 2,
+            name: "Вкусвилл",
+            profit: 91.2,
+          },
+          {
+            id: 3,
+            name: "Самокат",
+            profit: 82.5,
+          },
+          {
+            id: 4,
+            name: "Ozon",
+            profit: 58.1,
+          },
+          {
+            id: 5,
+            name: "Wildberries",
+            profit: 57.2,
+          },
+        ]
+    }
   }
 }
 </script>
@@ -80,7 +123,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px; 
-  box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
+  box-shadow: 0px 5px 7px -2px rgba(222, 195, 255, 0.18);
   border-radius: 8px;
   background-color: #FFFFFF;
   padding: 12px 18px;
@@ -90,7 +133,7 @@ export default {
   display: flex;
   box-shadow: 0px 5px 7px -2px rgba(26, 21, 32, 0.18);
   border-radius: 8px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 22px;
   margin-right: 20px;
 }
